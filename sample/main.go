@@ -10,7 +10,7 @@ import (
 func init() {
 	panix.InitSlack("staging", &panix.SlackConfig{
 		Channel:     "core-panic",
-		WebHookURL:  "https://hooks.slack.com/services/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",
+		WebHookURL:  "https://hooks.slack.com/services/xx/xx/xxxx",
 		Enabled:     true,
 		EnabledEnvs: []string{"staging", "production"},
 	})
