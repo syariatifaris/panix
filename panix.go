@@ -181,7 +181,7 @@ func postToSlack(title, cause, stackTrace string, contents map[string]string) er
 	}
 	b, err := json.Marshal(payload)
 	if err != nil {
-		log.Println("[panics] marshal err", err, title, cause, stackTrace)
+		log.Println("[panix] marshal err", err, title, cause, stackTrace)
 		return err
 	}
 
@@ -199,10 +199,10 @@ func postToSlack(title, cause, stackTrace string, contents map[string]string) er
 	if resp.StatusCode >= 300 {
 		b, err := ioutil.ReadAll(resp.Body)
 		if err != nil {
-			log.Printf("[panics] error on capturing error : %s %s %s %s\n", err, title, cause, stackTrace)
+			log.Printf("[panix] error on capturing error : %s %s %s %s\n", err, title, cause, stackTrace)
 			return err
 		}
-		log.Printf("[panics] error on capturing error : %s %s %s %s\n", string(b), title, cause, stackTrace)
+		log.Printf("[panix] error on capturing error : %s %s %s %s\n", string(b), title, cause, stackTrace)
 	}
 	return nil
 }

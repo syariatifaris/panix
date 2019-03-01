@@ -8,7 +8,7 @@ To use panicx you can create a slack incoming webhook:
 ```
 https://get.slack.help/hc/en-us/articles/115005265063-Incoming-WebHooks-for-Slack
 ```
-And integrate it using this library. Panics is agnostic to any http handler library
+And integrate it using this library. Panix is agnostic to any http handler library
 
 ### sample: 
 ```
