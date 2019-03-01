@@ -4,7 +4,7 @@
 Panicx is an library written in Go to caputure panic event, and post it to your own slack channel. 
 
 ## How to use
-To use panicx you can create a slack incoming webhook:
+To use panix you can create a slack incoming webhook:
 ```
 https://get.slack.help/hc/en-us/articles/115005265063-Incoming-WebHooks-for-Slack
 ```
@@ -16,7 +16,7 @@ package main
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/syariatifaris/panicx"
+	"github.com/syariatifaris/panix"
 	"log"
 	"net/http"
 )
