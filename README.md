@@ -1,7 +1,7 @@
 # Panix - Post Panic to Slack
 
 ## About
-Panicx is an library written in Go to caputure panic event, and post it to your own slack channel. 
+Panix is an library written in Go to caputure panic event, and post it to your own slack channel. 
 
 ## How to use
 To use panix you can create a slack incoming webhook:
