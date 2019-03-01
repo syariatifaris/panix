@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"log"
+	"net/http/httputil"
 	"os"
 	"time"
 
@@ -204,6 +205,14 @@ func postToSlack(title, cause, stackTrace string, contents map[string]string) er
 		log.Printf("[panics] error on capturing error : %s %s %s %s\n", string(b), title, cause, stackTrace)
 	}
 	return nil
+}
+
+func GetSlackTitleAndContent(r *http.Request) (string, map[string]string, error) {
+	request, err := httputil.DumpRequest(r, true)
+	if err != nil {
+		return "", nil, err
+	}
+	return GetSlackTitle(r), map[string]string{"Request": string(request)}, nil
 }
 
 //toBold convert normal text to slack bold text
